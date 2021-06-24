@@ -1,28 +1,60 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view/>
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+<style lang="scss">
+  @import '~bootstrap-v4-rtl';
+ *{
+   box-sizing: border-box;
+ }
+  html,body{
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
   }
-}
-</script>
+  .wrapper{
+    width: 1440px;
+    margin: 0 auto;
+    background-color: pink;
+  }
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
+  @media (max-width: 320px) {
+    .wrapper{
+      width: 320px;
+    }
+
+  }
+  @media (max-width: 375px) and (min-width: 320px) {
+    .wrapper{
+      width: 320px;
+    }
+
+  }
+  @media (max-width: 425px) and (min-width: 375px) {
+    .wrapper{
+      width: 375px;
+    }
+  }
+  @media (max-width: 768px) and (min-width: 425px) {
+    .wrapper{
+      width: 425px;
+    }
+  }
+
+  @media (max-width: 1024px) and (min-width: 768px) {
+    .wrapper{
+      width: 768px;
+    }
+  }
+
+  @media (max-width: 1440px) and (min-width: 1024px) {
+    .wrapper{
+      width: 1024px;
+    }
+  }
+
 </style>
