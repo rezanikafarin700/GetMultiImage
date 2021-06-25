@@ -18,7 +18,6 @@
   .wrapper{
     width: 1440px;
     margin: 0 auto;
-    background-color: pink;
   }
 
 

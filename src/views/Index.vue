@@ -1,42 +1,31 @@
 <template>
 	<div>
-		<div class="container">
-			<carousel  class="carousel" :paginationEnabled="false" per-page="4" :navigate-to="someLocalProperty" :mouse-drag="true">
-				<slide v-for="n in 12" :key="n">
-					<div class="image">
-						<img :src="`images/${n}.jpg`" alt="Not Found">
-					</div>
-				</slide>
-			</carousel>
+		<div class="wrapper">
+			<get-multi-image v-model="myData.images"/>
 		</div>
+
 	</div>
 </template>
 
 <script>
-    import {Carousel, Slide} from 'vue-carousel';
+    import GetMultiImage from "../components/GetMultiImage";
 
     export default {
-        name: "Index",
+        name: "test",
+
         components: {
-            Carousel,
-            Slide
+            GetMultiImage
+        },
+
+
+        data() {
+            return {
+                myData : {}
+            }
         }
     }
 </script>
 
-<style scoped lang="scss">
-
-	.carousel{
-		padding: 2rem;
-	}
-	.image {
-		width: 200px;
-		height: 200px;
-
-		img {
-			width: 100%;
-			height: 100%;
-		}
-	}
+<style scoped>
 
 </style>
